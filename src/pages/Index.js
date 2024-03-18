@@ -86,8 +86,8 @@ const DownloadSection = () => {
 }
 
 const HowToSection = () => {
-    const line = `<svg width="2" height="374" viewBox="0 0 2 374" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="-3.27835e-08" x2="0.750016" y2="374" stroke="#C3EBFF" strokeWidth="1.5"/></svg>`
-    const line2 = `<svg width="2" height="343" viewBox="0 0 2 343" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="-3.27835e-08" x2="0.750016" y2="343" stroke="#C3EBFF" strokeWidth="1.5"/></svg>`
+    const line = `<svg width="2" height="240" viewBox="0 0 2 240" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="-3.27835e-08" x2="0.750016" y2="374" stroke="#C3EBFF" strokeWidth="1.5"/></svg>`
+    const line2 = `<svg width="2" height="230" viewBox="0 0 2 230" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="-3.27835e-08" x2="0.750016" y2="343" stroke="#C3EBFF" strokeWidth="1.5"/></svg>`
     return (
         <>
             <div className="mx-auto relative py-16">
@@ -98,7 +98,7 @@ const HowToSection = () => {
                     <div className="grid sm:grid-cols-2 lg:grid-cols-2 items-center py-8">
                         <div className="relative">
                             <div className="hidden sm:block absolute right-12 top-9 z-0" dangerouslySetInnerHTML={{ __html: line}}></div>
-                            <div className="hidden lg:block absolute -right-12 z-0 border-b border-blue-100 w-24" style={{ borderColor:'#c3ebff', bottom: '-74px' }}></div>
+                            <div className="hidden absolute -right-12 z-0 border-b border-blue-100 w-24" style={{ borderColor:'#c3ebff', bottom: '-74px' }}></div>
                             <div className="flex justify-end pr-8 py-6 z-5 relative">
                                 <div className="pr-12 text-right">
                                     <h2 className="font-semibold">Create a free account</h2>
@@ -144,7 +144,7 @@ const HowToSection = () => {
                             <img src={SmallGirl} alt="Small Girl" />
                         </div>
                         <div className="relative">
-                            <div className="absolute left-12 md:bottom-16 z-0 hidden sm:block" dangerouslySetInnerHTML={{ __html: line2}}></div>
+                            <div className="absolute left-12 md:top-6 z-0 hidden sm:block" dangerouslySetInnerHTML={{ __html: line2}}></div>
                             <div className="flex pl-8 py-6 relative">
                                 <div>
                                     <svg width={32} height={32} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx={16} cy={16} r={14} fill="#0095DA" stroke="#C3EBFF" strokeWidth={4}/><path d="M20.264 17.032V18.936H18.728V21H16.296V18.936H11.576V17.096L16.728 9.72H18.728V17.032H20.264ZM13.848 17.032H16.296V13.512L13.848 17.032Z" fill="#C3EBFF"/></svg>
