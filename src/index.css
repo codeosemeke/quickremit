@@ -1,0 +1,58 @@
+@import '~tailwindcss/dist/base.min.css';
+@import '~tailwindcss/dist/utilities.min.css';
+@import '~tailwindcss/dist/components.min.css';
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+  --primary: #0095DA;
+  --secondary: #BDE9FF;
+}
+
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  transition: all .2s linear;
+  scroll-behavior: smooth;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.bg-footer {
+  background-color: #001E2C;
+}
+.text-secondary {
+  color: var(--secondary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.border-secondary {
+  border-color: var(--secondary);
+}
+
+.bg-footer {
+  background-color: #001E2C;
+}
+.instagram {
+  background: linear-gradient(180deg, #BB46AF 0%, #BE3535 100%);
+}
