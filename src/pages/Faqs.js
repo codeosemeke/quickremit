@@ -3,6 +3,7 @@ import { Layout } from '../layouts/Index'
 import { FaqsView } from '../views/FaqsView'
 import { Link } from 'react-router-dom'
 import { faqsOptions } from '../Data/Contents/FaqsContents'
+import NoData from '../assets/img/no-data.svg'
 
 const HeroView = ({ search, setSearch }) => {
     return (
@@ -12,7 +13,7 @@ const HeroView = ({ search, setSearch }) => {
                 <div className="w-48 h-48 absolute right-10 top-48" style={{ backgroundColor: '#0095DA', filter: 'blur(50px)' }}></div>
                 <div className="w-20 h-20 absolute right-1/2 top-12" style={{ backgroundColor: '#0095DA', filter: 'blur(60px)' }}></div>
                 <div className="w-20 h-20 absolute right-1/2 top-72" style={{ backgroundColor: '#0095DA', filter: 'blur(60px)' }}></div>
-                <div className="w-full pb-4 flex flex-col items-center w-full max-w-2xl mx-auto text-center">
+                <div className="w-full pb-4 flex flex-col items-center max-w-2xl mx-auto text-center">
                     <h2 className="font-bold text-2xl sm:text-3xl md:text-4xl text-gray-900 leading-loose tracking-wider">
                         Here to Support you
                     </h2>
@@ -84,7 +85,15 @@ const FaqsSection = ({ faqs }) => {
                 <div>
                     <h2 className="text-gray-500 font-semibold py-2 uppercase">Explore all Faqs</h2>
                 </div>
-                <FaqsView faqs={faqs} /> 
+                {
+                    faqs.length > 0 
+                    ? <FaqsView faqs={faqs} /> 
+                    : <div className='flex flex-col items-center justify-center py-12'>
+                        <img alt='No Data' src={NoData} className='p-4 w-48 h-auto' />
+                        <p>No Data Found</p>
+                    </div>
+                }
+                
             </div> 
         </>
     )

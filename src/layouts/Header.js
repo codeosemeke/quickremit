@@ -24,13 +24,13 @@ export const Header = () => {
         <header>
             <nav className="w-full pt-1 bg-white fixed z-40 border-b border-blue-100">
                 <div className="md:flex md:justify-between px-6 md:px-12 items-center">
-                    <div className="inline-flex items-center">
+                    <div className="w-full md:w-auto inline-flex justify-between items-center">
+                        <Link to="/" className="py-2 ml-4 md:ml-0 inline-flex items-center">
+                            <Logo />
+                        </Link>
                         <button onClick={() => setShowMobileMenu(!showMobileMenu)} className="text-gray-600 inline-flex p-2 rounded md:hidden outline-none" data-target="#navigation">
                             <NavIcons />
                         </button>
-                        <Link to="/" className="py-2 ml-4 inline-flex items-center">
-                            <Logo />
-                        </Link>
                     </div>
                     <div className={showMobileMenu ? 'md:flex pt-1' : 'hidden md:flex justify-end pt-1'}>
                         <div className="lg:ml-6 lg:flex lg:space-x-8 py-2 md:py-0">
@@ -52,11 +52,6 @@ export const Header = () => {
                             >
                                 FAQs
                             </Link>
-                            <button
-                                className="hidden py-6 border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-semibold"
-                            >
-                                EN
-                            </button>
                         </div>
                         <div className="px-5 pt-3 hidden sm:flex">
                             <svg
@@ -69,7 +64,7 @@ export const Header = () => {
                                 <line x1="0.5" y1="2.18557e-08" x2="0.499999" y2={24} stroke="#AADCF3" />
                             </svg>
                         </div>
-                        <div className="sm:flex-shrink-0 pt-1">
+                        <div className="sm:flex-shrink-0 pt-1 pb-4 md:pb-0">
                             <Link
                                 to="/subscribe"
                                 className="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md focus:outline-none text-gray-800"

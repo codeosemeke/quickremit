@@ -107,7 +107,7 @@ export const CalculatorForm = () => {
     }, [showMethodDropdown, showSenderDropdown, showReceiverDropdown])
     return (
         <>
-            <div className="my-4 mt-2 z-10 bg-white relative rounded-lg p-8 sm:py-6 sm:p-12 max-w-lg shadow-lg lg:ml-32">
+            <div className="my-4 mt-2 z-10 bg-white relative rounded-lg p-6 sm:py-6 sm:p-6 md:p-8 xl:p-12 max-w-lg shadow-lg lg:ml-32">
                 <form className="relative" onSubmit={e => submit(e)}>
                     <div className="absolute left-3.5 bottom-24">
                         <svg width="2" height="341" viewBox="0 0 2 341" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="0.75" y1="-3.27835e-08" x2="0.750015" y2="341" stroke="#C3EBFF" strokeWidth="1.5"/></svg>
@@ -247,7 +247,7 @@ export const CalculatorForm = () => {
                                 <dt className="px-3 text-sm md:text-base">{`${+(rates[form.receiverCurrency] * parseFloat(form.senderAmount || 0)).toFixed(2) || 0} ${form.receiverCurrency}`}</dt>
                                 <dd className="flex items-center">
                                     <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="#777777"/></svg>
-                                    <Link to="#" className="px-2 text-sm md:text-base">Guaranteed Exchange rate (24hrs)</Link>
+                                    <Link to="#" className="px-2 text-sm md:text-base">Guaranteed Exchange rates</Link>
                                 </dd>
                             </div>
                             <div className="flex items-center py-2">
